@@ -1,0 +1,8 @@
+# Wrangler local state (cache, temp deploy bundles, dev session)
+.wrangler/
+
+# Dependencies
+node_modules/
+
+# macOS
+.DS_Store

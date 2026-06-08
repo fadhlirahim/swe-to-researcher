@@ -49,6 +49,16 @@ Define your target concretely. Each level is a *capability*, reached by a delive
 
 ---
 
+## Shared core + branches
+
+ML research isn't one path — it's a **shared trunk with several branches.** This roadmap is built that way:
+
+- **The trunk (universal to *any* ML research):** Phase 0–1 + [`research-method.md`](research-method.md). Backprop, optimization, neural nets, and the craft of research itself. You need these whatever you specialize in.
+- **The LLM / small-models branch (your primary):** Phases 2–5 below — transformers → language modeling → post-training → small models.
+- **The RL branch:** [`rl-track.md`](rl-track.md) — reinforcement learning, a *sibling* of the LLM branch off the same trunk, with its own theory (MDPs, value functions, policy gradients, PPO → RLHF/GRPO/RLVR). The two branches **merge at the frontier**: LLM post-training (Phase 4) *is* RL applied to language models.
+
+> RL is **one of the three ML paradigms** (supervised · self-supervised · reinforcement), not the "basis" of ML — the basis is the trunk above. Pick a branch at the specialization stage; the trunk is shared. The phase map below details the LLM branch.
+
 ## The phase map
 
 | Phase | Competence gained | Primary resource | Deliverable | ~Time |
@@ -112,8 +122,9 @@ Four habits, every week. Miss the courses, keep the loop.
 - This roadmap is the **learning superset** — it builds the competence.
 - `../advisory/small-models-research-onramp.md` is the **applied specialization** (Phase 5) plus how-to-get-visible-and-publish. It's the capstone this roadmap delivers you into.
 - `../research-buddy/` is the **tool** you use once you're at Phase 5 — generating and pressure-testing project ideas. Useless before then (you can't critique ideas you can't yet have); essential after.
+- [`rl-track.md`](rl-track.md) is the **RL branch** — same trunk, different specialization, if you take the reinforcement-learning route (or the RLVR/reasoning lane, which rejoins Phase 4).
 
-Sequence: **learn (this roadmap) → specialize (on-ramp) → ideate + scope (research-buddy) → ship.**
+Sequence: **learn the trunk → pick a branch (LLM/small-models or RL) → specialize (on-ramp) → ideate + scope (research-buddy) → ship.**
 
 ---
 

@@ -3,12 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Roadmap to Mastery — ML / LLM Research</title>
+<meta name="author" content="Fadhli Rahim">
+<title>Roadmap to Mastery: ML / LLM Research</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,900&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script>
-  // Set theme before paint — no flash of wrong theme.
+  // Set theme before paint, so there's no flash of the wrong theme.
   (function () {
     try {
       var saved = localStorage.getItem('rtm-theme');
@@ -25,6 +26,7 @@
 
     /* phase ramp: cool (foundations) → warm (mastery) */
     --p0: #8A8F98; --p1: #5B8DEF; --p2: #2FA8A0; --p3: #79B14A; --p4: #E0992F; --p5: #FF6B4A;
+    --rl: #9B72E0;  /* RL branch, distinct from the phase ramp */
   }
   html[data-theme="dark"] {
     --bg: #14161B; --bg-2: #1A1D25; --bg-3: #21252F; --bg-hero: #101216;
@@ -74,6 +76,8 @@
   }
   .hero h1 em { font-style: italic; color: var(--accent); font-weight: 500; }
   .hero .sub { color: var(--dim); max-width: 60ch; margin: 0 auto; font-size: 19px; }
+  .hero .byline { font-family: var(--mono); font-size: 13px; letter-spacing: .04em; color: var(--dim); margin: 18px auto 0; }
+  .hero .byline strong { color: var(--accent); font-weight: 500; }
   .hero .badges { margin-top: 26px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
   .chip {
     font-family: var(--mono); font-size: 12px; padding: 6px 13px; border-radius: 100px;
@@ -236,7 +240,8 @@
 <header class="hero" id="top">
   <div class="eyebrow">A field manual · 2026</div>
   <h1>Roadmap to <em>Mastery</em></h1>
-  <p class="sub">From "strong engineer with a massive gap in ML research" to "independent researcher who ships original work." A spiral curriculum, not a syllabus — built around <strong>artifacts, not courses</strong>.</p>
+  <p class="sub">This is how I'm teaching myself to go from a strong engineer with a big gap in ML research to someone who ships original work. It's a spiral, not a syllabus. The whole thing is built around <strong>what you make, not what you finish</strong>.</p>
+  <p class="byline">By <strong>Fadhli Rahim</strong></p>
   <div class="badges">
     <span class="chip ok"><a href="#provenance">✓ claims verified</a></span>
     <span class="chip">build-first · reproduce-before-innovate · learn in public</span>
@@ -251,6 +256,7 @@
     <a href="#levels"><span class="dot" style="background:var(--p1)"></span>The levels (L0–L4)</a>
     <a href="#pipeline"><span class="dot" style="background:var(--p2)"></span>The mental model</a>
     <a href="#map"><span class="dot" style="background:var(--p3)"></span>The phase map</a>
+    <a href="#branches"><span class="dot" style="background:var(--rl)"></span>Core + branches</a>
     <a href="#cadence"><span class="dot" style="background:var(--p4)"></span>Weekly cadence</a>
     <div class="grp"></div>
     <a class="sub" href="#phase-0"><span class="dot" style="background:var(--p0)"></span>0 · Orientation</a>
@@ -259,6 +265,7 @@
     <a class="sub" href="#phase-3"><span class="dot" style="background:var(--p3)"></span>3 · Training &amp; systems</a>
     <a class="sub" href="#phase-4"><span class="dot" style="background:var(--p4)"></span>4 · Post-training &amp; eval</a>
     <a class="sub" href="#phase-5"><span class="dot" style="background:var(--p5)"></span>5 · Specialization &amp; research</a>
+    <a class="sub" href="#rl"><span class="dot" style="background:var(--rl)"></span>↺ RL branch</a>
     <div class="grp"></div>
     <a href="#method"><span class="dot" style="background:var(--accent)"></span>Research method</a>
     <a href="#resources"><span class="dot" style="background:var(--info)"></span>Resources</a>
@@ -271,14 +278,14 @@
     <section id="overview" style="--ph:var(--accent)">
       <div class="sec-head"><span class="sec-num">·</span><h2 class="sec-title">Overview &amp; philosophy</h2></div>
       <div class="sec-rule"></div>
-      <p class="lead">Most people fail this not for lack of resources — there are too many — but because they learn in the wrong <em>shape</em>. The philosophy below matters more than the curriculum.</p>
+      <p class="lead">Most people don't fail this for lack of resources. There are too many resources. They fail because they learn in the wrong <em>shape</em>. So the philosophy below matters more than the curriculum does.</p>
 
       <h4>The honest premise</h4>
       <ul class="clean">
-        <li><strong>Mastery is years, not months.</strong> Be suspicious of anyone selling "AI researcher in 8 weeks" — including this roadmap. It's a map, not a contract.</li>
-        <li><strong>But useful competence is months.</strong> "Build a GPT from scratch and read most papers" in ~3–6 months; "run a clean extension of a published result" in ~6–12.</li>
-        <li><strong>"Researcher" is a ladder, not a binary.</strong> You climb it by shipping artifacts, not finishing courses.</li>
-        <li><strong>The bottleneck is reps and taste, not information.</strong> Everything you need is free. What's scarce is the discipline to build, reproduce, and write — repeatedly, in public.</li>
+        <li><strong>Mastery is years, not months.</strong> Be suspicious of anyone selling "AI researcher in 8 weeks." Be a little suspicious of this roadmap too. It's a map, not a contract.</li>
+        <li><strong>But useful competence is months.</strong> You can build a GPT from scratch and read most papers in about 3 to 6 months. You can run a clean extension of a published result in about 6 to 12.</li>
+        <li><strong>"Researcher" is a ladder, not a binary.</strong> You climb it by shipping artifacts, not by finishing courses.</li>
+        <li><strong>The bottleneck is reps and taste, not information.</strong> Everything you need is free. What's scarce is the discipline to build, reproduce, and write. Over and over, and in public.</li>
       </ul>
 
       <h3>The 5 principles</h3>
@@ -287,32 +294,32 @@
         <div class="card"><strong>2 · Spiral, don't sequence.</strong><p class="dim" style="margin:6px 0 0">The phases are a competence map, not a strict order. A vertical slice early beats a perfect horizontal foundation.</p></div>
         <div class="card"><strong>3 · Artifacts over courses.</strong><p class="dim" style="margin:6px 0 0">A finished course is worth nothing; a reproduced result with a writeup is worth a lot. Every phase ends in something shippable.</p></div>
         <div class="card"><strong>4 · Reproduce before you innovate.</strong><p class="dim" style="margin:6px 0 0">You earn the right to have ideas by first reproducing others'. 80% of the real learning lives here.</p></div>
-        <div class="card" style="grid-column:1/-1"><strong>5 · Learn in public.</strong><p class="dim" style="margin:6px 0 0">A private learner is invisible with no feedback loop. Push to GitHub, write notes, join a community. This is the feedback mechanism and the network — not vanity.</p></div>
+        <div class="card" style="grid-column:1/-1"><strong>5 · Learn in public.</strong><p class="dim" style="margin:6px 0 0">A private learner is an invisible one, with no feedback loop. So push to GitHub, write notes, join a community. This is the feedback mechanism and the network. It's not vanity. It's how you get better.</p></div>
       </div>
 
-      <div class="pull">The cardinal sin of empirical ML is self-deception — believing a result that isn't real because you wanted it to be. Almost everything in the research-method section is a defense against that one failure.</div>
+      <div class="pull">The cardinal sin of empirical ML is self-deception. You believe a result that isn't real, because you wanted it to be true. Almost everything in the research-method section is a defense against that one failure.</div>
     </section>
 
     <!-- LEVELS -->
     <section id="levels" style="--ph:var(--p1)">
-      <div class="sec-head"><span class="sec-num" style="color:var(--p1)">↗</span><h2 class="sec-title">The levels — what "researcher" actually means</h2></div>
+      <div class="sec-head"><span class="sec-num" style="color:var(--p1)">↗</span><h2 class="sec-title">The levels, and what "researcher" actually means</h2></div>
       <div class="sec-rule"></div>
-      <p>Define your target concretely. Each level is a <em>capability</em>, reached by a deliverable — not a credential. <strong>Your near-term target is L2.</strong></p>
+      <p>Define your target concretely. Each level is a <em>capability</em> you reach by a deliverable, not a credential. <strong>Your near-term target is L2.</strong></p>
       <div class="ladder">
         <div class="rung" style="--lc:var(--p0)"><div class="lv">L0</div><div class="nm">Tourist</div><div class="cando">Runs notebooks, calls APIs, can't explain internals.</div><div class="meta">where most stop</div></div>
-        <div class="rung" style="--lc:var(--p1)"><div class="lv">L1</div><div class="nm">Reproducer</div><div class="cando">Builds + trains a small model from a blank file; reads most papers; reproduces a simple result.</div><div class="meta">3–6 mo · Phases 1–2</div></div>
-        <div class="rung" style="--lc:var(--p3)"><div class="lv">L2</div><div class="nm">Extender</div><div class="cando">Runs a clean ablation/extension of a paper; knows the pretrain→post-train→eval stack; ships a reproducible artifact.</div><div class="meta">6–12 mo · Phases 3–4</div></div>
+        <div class="rung" style="--lc:var(--p1)"><div class="lv">L1</div><div class="nm">Reproducer</div><div class="cando">Builds and trains a small model from a blank file. Reads most papers. Reproduces a simple result.</div><div class="meta">3–6 mo · Phases 1–2</div></div>
+        <div class="rung" style="--lc:var(--p3)"><div class="lv">L2</div><div class="nm">Extender</div><div class="cando">Runs a clean ablation or extension of a paper. Knows the pretrain, post-train and eval stack. Ships a reproducible artifact.</div><div class="meta">6–12 mo · Phases 3–4</div></div>
         <div class="rung" style="--lc:var(--p4)"><div class="lv">L3</div><div class="nm">Contributor</div><div class="cando">Produces a small <em>original</em> result others use; engaged in a community; a workshop paper or serious blog result.</div><div class="meta">1–2 yr · Phase 5</div></div>
         <div class="rung" style="--lc:var(--p5)"><div class="lv">L4</div><div class="nm">Independent</div><div class="cando">Sets their own research direction; produces recognized original work.</div><div class="meta">2–4+ yr</div></div>
       </div>
-      <p class="dim" style="font-size:14px">* at ~10–15 focused hrs/week. The levels are the point, not the clock. <span class="callout note" style="display:inline-block;padding:2px 10px;margin:0">The L0–L4 scheme and timelines are <b>my editorial framing</b>, not a cited standard — see <a href="#provenance">Provenance</a>.</span></p>
+      <p class="dim" style="font-size:14px">* at about 10 to 15 focused hours a week. The levels are the point, not the clock. <span class="callout note" style="display:inline-block;padding:2px 10px;margin:0">The L0 to L4 scheme and the timelines are <b>my own framing</b>, not a cited standard. See <a href="#provenance">Provenance</a>.</span></p>
     </section>
 
     <!-- PIPELINE -->
     <section id="pipeline" style="--ph:var(--p2)">
       <div class="sec-head"><span class="sec-num" style="color:var(--p2)">⌘</span><h2 class="sec-title">The mental model</h2></div>
       <div class="sec-rule"></div>
-      <p>A modern language model, end to end. Every phase zooms into one part of this pipeline — keep it in your head and you'll understand more of it each week.</p>
+      <p>A modern language model, end to end. Every phase zooms into one part of this pipeline. Keep it in your head and you'll understand a little more of it each week.</p>
       <div class="pipe">
         <div class="node" style="--phc:var(--p0)"><span class="lbl">text</span><span class="ph">input</span></div>
         <div class="arrow">→</div>
@@ -324,7 +331,7 @@
         <div class="arrow">→</div>
         <div class="node" style="--phc:var(--p2)"><span class="lbl">logits → next token</span><span class="ph">output</span></div>
       </div>
-      <p class="dim" style="font-size:14.5px"><strong>Trained by</strong> next-token prediction on a big corpus (<span class="tag" style="--ph:var(--p3)">Phase 3 · pretraining</span>), <strong>shaped by</strong> SFT + RL on curated data (<span class="tag" style="--ph:var(--p4)">Phase 4 · post-training</span>), <strong>measured by</strong> evals that lie in subtle ways (<span class="tag" style="--ph:var(--p4)">Phase 4 · eval</span>). <strong>Made better than anyone at small scale</strong> = <span class="tag" style="--ph:var(--p5)">Phase 5 · research</span>.</p>
+      <p class="dim" style="font-size:14.5px">It's <strong>trained by</strong> next-token prediction on a big corpus (<span class="tag" style="--ph:var(--p3)">Phase 3 · pretraining</span>). It's <strong>shaped by</strong> SFT and RL on curated data (<span class="tag" style="--ph:var(--p4)">Phase 4 · post-training</span>). It's <strong>measured by</strong> evals that lie to you in subtle ways (<span class="tag" style="--ph:var(--p4)">Phase 4 · eval</span>). And making one box better than anyone else at small scale is the whole game (<span class="tag" style="--ph:var(--p5)">Phase 5 · research</span>).</p>
     </section>
 
     <!-- MAP -->
@@ -335,20 +342,34 @@
         <div class="tl-row"><div class="tl-node" style="--nc:var(--p0)">0</div><div class="tl-body"><div class="t"><a href="#phase-0">Orientation</a></div><div class="d">Environment, mental model, first vertical slice.</div><div class="meta">deliverable: a trained tiny model, day 1 · ~1 wk</div></div></div>
         <div class="tl-row"><div class="tl-node" style="--nc:var(--p1)">1</div><div class="tl-body"><div class="t"><a href="#phase-1">Foundations</a></div><div class="d">Backprop + neural nets + ML from scratch; math just-in-time.</div><div class="meta">deliverable: micrograd + makemore, reimplemented · 4–8 wk</div></div></div>
         <div class="tl-row"><div class="tl-node" style="--nc:var(--p2)">2</div><div class="tl-body"><div class="t"><a href="#phase-2">Transformers &amp; LLMs</a></div><div class="d">Attention, build + train a GPT, the full small-LLM stack.</div><div class="meta">deliverable: a GPT trained from a blank file · 4–8 wk</div></div></div>
-        <div class="tl-row"><div class="tl-node" style="--nc:var(--p3)">3</div><div class="tl-body"><div class="t"><a href="#phase-3">Training &amp; systems</a></div><div class="d">Scaling laws, efficiency, kernels, data — reproduce a result.</div><div class="meta">deliverable: one clean reproduction + ablation (your L2 credential) · 8–12 wk</div></div></div>
+        <div class="tl-row"><div class="tl-node" style="--nc:var(--p3)">3</div><div class="tl-body"><div class="t"><a href="#phase-3">Training &amp; systems</a></div><div class="d">Scaling laws, efficiency, kernels, data, then reproduce a result.</div><div class="meta">deliverable: one clean reproduction + ablation (your L2 credential) · 8–12 wk</div></div></div>
         <div class="tl-row"><div class="tl-node" style="--nc:var(--p4)">4</div><div class="tl-body"><div class="t"><a href="#phase-4">Post-training &amp; eval</a></div><div class="d">SFT, RLHF/DPO/GRPO, evaluation as a discipline.</div><div class="meta">deliverable: a post-trained small model + honest eval · 4–8 wk</div></div></div>
         <div class="tl-row"><div class="tl-node" style="--nc:var(--p5)">5</div><div class="tl-body"><div class="t"><a href="#phase-5">Specialization &amp; research</a></div><div class="d">A niche + your first original result + community + publishing.</div><div class="meta">deliverable: a shipped original artifact · ongoing</div></div></div>
       </div>
-      <p class="dim" style="font-size:14px">Woven through every phase: <a href="#method">the research method</a> — start it in week 1, not at the end.</p>
+      <p class="dim" style="font-size:14px">Running through every phase is <a href="#method">the research method</a>. Start it in week 1, not at the end.</p>
+    </section>
+
+    <!-- BRANCHES -->
+    <section id="branches" style="--ph:var(--rl)">
+      <div class="sec-head"><span class="sec-num" style="color:var(--rl)">⎇</span><h2 class="sec-title">Shared core + branches</h2></div>
+      <div class="sec-rule" style="--ph:var(--rl)"></div>
+      <p>ML research isn't one path. It's a <strong>shared trunk with several branches</strong>, and this roadmap is built that way:</p>
+      <div class="grid2">
+        <div class="card"><h4 style="margin-top:0">🌳 The trunk (universal)</h4><p class="dim" style="margin:0">Phase 0–1 plus the <a href="#method">research method</a>. Backprop, optimization, neural nets, the craft of research. You need these whatever you specialize in.</p></div>
+        <div class="card" style="border-left:3px solid var(--p3)"><h4 style="margin-top:0">🔠 LLM / small-models <span class="dim">(your primary)</span></h4><p class="dim" style="margin:0">Phases 2–5. Transformers → language modeling → post-training → small models.</p></div>
+        <div class="card" style="border-left:3px solid var(--rl)"><h4 style="margin-top:0">↺ RL branch <a href="#rl" style="font-size:13px">(jump ↓)</a></h4><p class="dim" style="margin:0">A sibling off the same trunk, with its own theory: MDPs → policy gradients → PPO → RLHF/GRPO/RLVR.</p></div>
+        <div class="card" style="border-left:3px solid var(--accent)"><h4 style="margin-top:0">🔀 They merge at the frontier</h4><p class="dim" style="margin:0">LLM post-training (Phase 4) <em>is</em> RL applied to language models. The branches meet at RLVR/GRPO.</p></div>
+      </div>
+      <div class="callout note"><b>Quick correction.</b> RL is <strong>one of the three ML paradigms</strong> (supervised, self-supervised, reinforcement), not the "basis" of ML. The basis is the trunk above. You pick a branch at the specialization stage. The trunk is shared.</div>
     </section>
 
     <!-- CADENCE -->
     <section id="cadence" style="--ph:var(--p4)">
       <div class="sec-head"><span class="sec-num" style="color:var(--p4)">↻</span><h2 class="sec-title">The weekly cadence</h2></div>
       <div class="sec-rule"></div>
-      <p>The compounding habit matters more than any single course. Four habits, every week, every phase. <strong>Miss the courses, keep the loop.</strong></p>
+      <p>The habit that compounds matters more than any single course. Four habits, every week, every phase. <strong>Miss the courses, keep the loop.</strong></p>
       <div class="cadence">
-        <div class="hab"><div class="ic">🔨</div><div class="h">Build / reproduce</div><div class="x">one slice of the current phase's project — most of your hours.</div></div>
+        <div class="hab"><div class="ic">🔨</div><div class="h">Build / reproduce</div><div class="x">one slice of the current phase's project, and most of your hours.</div></div>
         <div class="hab"><div class="ic">📄</div><div class="h">Read 2–3 papers</div><div class="x">figures-first, each with a one-paragraph note.</div></div>
         <div class="hab"><div class="ic">✍️</div><div class="h">Write one note</div><div class="x">a log entry, a "what I got stuck on," a short explainer.</div></div>
         <div class="hab"><div class="ic">💬</div><div class="h">Engage once</div><div class="x">post a result, ask/answer in a community, read others' work.</div></div>
@@ -359,18 +380,18 @@
     <section id="phase-0" style="--ph:var(--p0)">
       <div class="sec-head"><span class="sec-num">0</span><h2 class="sec-title">Orientation</h2></div>
       <div class="sec-rule"></div>
-      <p class="dim"><span class="tag">≈ 1 week</span> Kill the "where do I start" paralysis by shipping a trained model in your first days. You're a strong engineer — the trap isn't capability, it's spending three weeks "preparing to learn." Don't.</p>
+      <p class="dim"><span class="tag">≈ 1 week</span> Kill the "where do I start" paralysis by shipping a trained model in your first few days. You're a strong engineer, so the trap isn't capability. The trap is spending three weeks "preparing to learn." Don't.</p>
       <h4>Do this, in order</h4>
       <ul class="clean">
-        <li><strong>Environment</strong> (½ day) — PyTorch; a consumer GPU or free Colab/Kaggle. Don't over-build it.</li>
-        <li><strong>First vertical slice</strong> (1–2 days) — run <a href="https://course.fast.ai" target="_blank" rel="noopener">fast.ai Lesson 1</a> or train <a href="https://github.com/karpathy/nanoGPT" target="_blank" rel="noopener">nanoGPT</a> on tiny-shakespeare. Watch a loss curve drop. You won't understand most of it — that's fine.</li>
-        <li><strong>Public scaffolding</strong> (½ day) — a GitHub repo, a <code>LOG.md</code> research log (the single highest-ROI habit here), a paper-notes file.</li>
-        <li><strong>Join one community</strong> — the <a href="https://www.eleuther.ai" target="_blank" rel="noopener">EleutherAI Discord</a>. Lurk.</li>
-        <li><strong>Set your target</strong> — write "my 6-month target is L2" in your log.</li>
+        <li><strong>Environment</strong> (½ day). PyTorch, and either a consumer GPU or free Colab/Kaggle. Don't over-build it.</li>
+        <li><strong>First vertical slice</strong> (1–2 days). Run <a href="https://course.fast.ai" target="_blank" rel="noopener">fast.ai Lesson 1</a>, or train <a href="https://github.com/karpathy/nanoGPT" target="_blank" rel="noopener">nanoGPT</a> on tiny-shakespeare. Watch a loss curve drop. You won't understand most of it, and that's fine.</li>
+        <li><strong>Public scaffolding</strong> (½ day). A GitHub repo, a <code>LOG.md</code> research log (the single highest-ROI habit here), and a paper-notes file.</li>
+        <li><strong>Join one community.</strong> The <a href="https://www.eleuther.ai" target="_blank" rel="noopener">EleutherAI Discord</a>. Just lurk for now.</li>
+        <li><strong>Set your target.</strong> Write "my 6-month target is L2" in your log.</li>
       </ul>
       <h4>Milestone</h4>
       <ul class="ms"><li>A loss curve you produced, in your repo.</li><li>First <code>LOG.md</code> entry written.</li><li>First paper skimmed figures-first (try TinyStories) + 3-sentence note.</li><li>EleutherAI joined.</li></ul>
-      <div class="callout trap"><b>Traps</b> — tooling rabbit holes; "I need to understand it first" (no: run it, then understand it); skipping the log.</div>
+      <div class="callout trap"><b>Traps.</b> Tooling rabbit holes. Telling yourself "I need to understand it first" (no, run it, then understand it). Skipping the log.</div>
       <div class="pn"><span></span><a href="#phase-1">Phase 1 · Foundations →</a></div>
     </section>
 
@@ -378,21 +399,21 @@
     <section id="phase-1" style="--ph:var(--p1)">
       <div class="sec-head"><span class="sec-num">1</span><h2 class="sec-title">Foundations</h2></div>
       <div class="sec-rule"></div>
-      <p class="dim"><span class="tag">≈ 4–8 weeks</span> Understand and <em>implement from a blank file</em> the machinery under every model: backprop, gradient descent, a neural net, core ML. Your gap isn't coding — it's the intuition for why nets train and the ML grammar that makes experiments interpretable.</p>
+      <p class="dim"><span class="tag">≈ 4–8 weeks</span> Understand and <em>implement from a blank file</em> the machinery under every model: backprop, gradient descent, a neural net, core ML. Your gap isn't coding. It's the intuition for why nets train, and the ML grammar that makes experiments interpretable.</p>
       <h4>What to learn (priority order)</h4>
       <ul class="clean">
-        <li><strong>Backpropagation</strong> — the chain rule on a computation graph. The single most important thing here. Implement reverse-mode autodiff and most of DL stops being magic.</li>
-        <li><strong>Gradient descent &amp; optimizers</strong> — SGD, momentum, Adam; learning rate as the thing that matters most.</li>
-        <li><strong>A neural net from scratch</strong> — MLP, activations, initialization.</li>
-        <li><strong>Core ML</strong> — cross-entropy, train/val/test, overfitting, regularization, bias–variance. The grammar of every experiment.</li>
-        <li><strong>Math, just-in-time</strong> — linear algebra, the chain rule, probability/cross-entropy/KL. Learn each <em>when a model forces you to</em>.</li>
+        <li><strong>Backpropagation.</strong> The chain rule on a computation graph. The single most important thing here. Implement reverse-mode autodiff and most of DL stops being magic.</li>
+        <li><strong>Gradient descent &amp; optimizers.</strong> SGD, momentum, Adam. Learning rate is the thing that matters most.</li>
+        <li><strong>A neural net from scratch.</strong> MLP, activations, initialization.</li>
+        <li><strong>Core ML.</strong> Cross-entropy, train/val/test, overfitting, regularization, bias–variance. The grammar of every experiment.</li>
+        <li><strong>Math, just-in-time.</strong> Linear algebra, the chain rule, probability/cross-entropy/KL. Learn each one <em>when a model forces you to</em>.</li>
       </ul>
       <h4>Primary path</h4>
-      <p><a href="https://karpathy.ai/zero-to-hero.html" target="_blank" rel="noopener">Karpathy — Neural Networks: Zero to Hero</a> is the spine. <strong>Do the exercises.</strong> Build <strong>micrograd</strong> (a tiny autodiff engine — this <em>is</em> backprop) and <strong>makemore</strong> (a char-level LM). One breadth reference: <a href="https://course.fast.ai" target="_blank" rel="noopener">fast.ai</a> or <a href="https://d2l.ai" target="_blank" rel="noopener">d2l.ai</a>. Math lookup only: <a href="https://mml-book.github.io" target="_blank" rel="noopener">Mathematics for ML</a>.</p>
-      <div class="callout note"><b>Deliverable</b> — reimplement micrograd + makemore from memory (not copy-paste), pushed with READMEs. Bonus: a "what backprop actually computes" explainer — teaching it finds your holes.</div>
-      <h4>Milestone — you've finished when you can…</h4>
-      <ul class="ms"><li>Implement reverse-mode autodiff from a blank file; hand-derive one gradient to check it.</li><li>Build, train, and <em>debug</em> an MLP without copying (diagnose a bad LR from the curve).</li><li>Explain cross-entropy, the val split, overfitting + 3 fixes — in your own words.</li><li>Read an empirical ML paper and follow its training setup.</li></ul>
-      <div class="callout trap"><b>Traps</b> — watching instead of building (close the video, rebuild from a blank file); math-first detours; copy-paste "completion."</div>
+      <p><a href="https://karpathy.ai/zero-to-hero.html" target="_blank" rel="noopener">Karpathy's Neural Networks: Zero to Hero</a> is the spine. <strong>Do the exercises.</strong> Build <strong>micrograd</strong> (a tiny autodiff engine, and this <em>is</em> backprop) and <strong>makemore</strong> (a char-level LM). For breadth, keep <a href="https://course.fast.ai" target="_blank" rel="noopener">fast.ai</a> or <a href="https://d2l.ai" target="_blank" rel="noopener">d2l.ai</a> handy. For math, look things up in <a href="https://mml-book.github.io" target="_blank" rel="noopener">Mathematics for ML</a> when you need them.</p>
+      <div class="callout note"><b>Deliverable.</b> Reimplement micrograd and makemore from memory (not copy-paste), pushed with READMEs. Bonus: write a "what backprop actually computes" explainer. Teaching it is how you find the holes in your understanding.</div>
+      <h4>Milestone: you've finished when you can…</h4>
+      <ul class="ms"><li>Implement reverse-mode autodiff from a blank file, and hand-derive one gradient to check it.</li><li>Build, train, and <em>debug</em> an MLP without copying (diagnose a bad LR from the curve).</li><li>Explain cross-entropy, the val split, and overfitting plus three fixes, in your own words.</li><li>Read an empirical ML paper and follow its training setup.</li></ul>
+      <div class="callout trap"><b>Traps.</b> Watching instead of building (close the video and rebuild from a blank file). Going down a math-first detour. Copy-pasting your way to a fake "done."</div>
       <div class="pn"><a href="#phase-0">← Orientation</a><a href="#phase-2">Phase 2 · Transformers →</a></div>
     </section>
 
@@ -400,21 +421,21 @@
     <section id="phase-2" style="--ph:var(--p2)">
       <div class="sec-head"><span class="sec-num">2</span><h2 class="sec-title">Transformers &amp; LLMs from scratch</h2></div>
       <div class="sec-rule"></div>
-      <p class="dim"><span class="tag">≈ 4–8 weeks</span> Build and train a GPT from a blank file; understand every component. This is the core of modern model research — the difference between "I fine-tuned a model" and "I can reason about why it behaves as it does."</p>
+      <p class="dim"><span class="tag">≈ 4–8 weeks</span> Build and train a GPT from a blank file, and understand every component. This is the core of modern model research. It's the difference between "I fine-tuned a model" and "I can reason about why it behaves the way it does."</p>
       <h4>What to learn</h4>
       <ul class="clean">
-        <li><strong>Self-attention</strong> — Q/K/V, multi-head, causal masking. The centerpiece — implement it from scratch.</li>
-        <li><strong>The transformer block</strong> — attention + MLP, residuals, LayerNorm/RMSNorm.</li>
-        <li><strong>Tokenization</strong> — BPE; how the tokenizer shapes everything downstream (an underrated source of bugs).</li>
-        <li><strong>Positional info</strong> — learned vs RoPE; why attention needs it (it's permutation-equivariant without it).</li>
-        <li><strong>The full pipeline</strong> — pretrain → SFT → eval, end to end, once.</li>
+        <li><strong>Self-attention.</strong> Q/K/V, multi-head, causal masking. The centerpiece, so implement it from scratch.</li>
+        <li><strong>The transformer block.</strong> Attention + MLP, residuals, LayerNorm/RMSNorm.</li>
+        <li><strong>Tokenization.</strong> BPE, and how the tokenizer shapes everything downstream (an underrated source of bugs).</li>
+        <li><strong>Positional info.</strong> Learned vs RoPE, and why attention needs it (it's permutation-equivariant without it).</li>
+        <li><strong>The full pipeline.</strong> Pretrain → SFT → eval, end to end, once.</li>
       </ul>
       <h4>Primary path</h4>
-      <p>Karpathy's <strong>"Let's build GPT"</strong> + <a href="https://github.com/karpathy/nanoGPT" target="_blank" rel="noopener">nanoGPT</a> (attention from a blank file). Sebastian Raschka — <a href="https://github.com/rasbt/LLMs-from-scratch" target="_blank" rel="noopener">Build an LLM (From Scratch)</a> as the deeper companion. <a href="https://github.com/karpathy/nanochat" target="_blank" rel="noopener">nanochat</a> to run the whole modern stack once (the resulting model is weak — running the pipeline is the point).</p>
-      <div class="callout note"><b>Deliverable</b> — a from-scratch GPT <em>plus one question answered empirically</em> (e.g. "how does final loss change with depth at fixed params?"). That shift from building to <em>investigating</em> is what makes this Phase 2.</div>
+      <p>Karpathy's <strong>"Let's build GPT"</strong> and <a href="https://github.com/karpathy/nanoGPT" target="_blank" rel="noopener">nanoGPT</a> get you attention from a blank file. Sebastian Raschka's <a href="https://github.com/rasbt/LLMs-from-scratch" target="_blank" rel="noopener">Build an LLM (From Scratch)</a> is the deeper companion. Then run <a href="https://github.com/karpathy/nanochat" target="_blank" rel="noopener">nanochat</a> once to see the whole modern stack end to end. The model it makes is weak, but running the pipeline is the point.</p>
+      <div class="callout note"><b>Deliverable.</b> A from-scratch GPT, <em>plus one question you answered empirically</em> (say, "how does final loss change with depth at fixed params?"). That shift from building to <em>investigating</em> is what makes this Phase 2 and not Phase 0.</div>
       <h4>Milestone</h4>
       <ul class="ms"><li>Implement multi-head causal self-attention from a blank file; explain every line.</li><li>Explain why attention needs positional info and how RoPE provides it.</li><li>Describe what a tokenizer does + one way it can hurt quality.</li><li>Train a GPT end-to-end; reproduce nanochat's pipeline once.</li></ul>
-      <div class="callout trap"><b>Traps</b> — treating attention as a formula to memorize (implement + visualize it); skipping the tokenizer; stopping at "it trains" instead of "a question answered."</div>
+      <div class="callout trap"><b>Traps.</b> Treating attention as a formula to memorize (implement it, then visualize it). Skipping the tokenizer. Stopping at "it trains" instead of "a question answered."</div>
       <div class="pn"><a href="#phase-1">← Foundations</a><a href="#phase-3">Phase 3 · Training &amp; systems →</a></div>
     </section>
 
@@ -422,21 +443,21 @@
     <section id="phase-3" style="--ph:var(--p3)">
       <div class="sec-head"><span class="sec-num">3</span><h2 class="sec-title">Training &amp; systems</h2></div>
       <div class="sec-rule"></div>
-      <p class="dim"><span class="tag">≈ 8–12 weeks</span> The longest, deepest phase — where your "massive gap" most closes. Learn how real models are trained <em>efficiently</em>, then reproduce a published result and run one clean ablation. This is your L1→L2 transition.</p>
+      <p class="dim"><span class="tag">≈ 8–12 weeks</span> The longest, deepest phase, and the one where your "massive gap" really closes. Learn how real models are trained <em>efficiently</em>, then reproduce a published result and run one clean ablation. This is your L1 to L2 transition.</p>
       <h4>What to learn</h4>
       <ul class="clean">
-        <li><strong>Scaling laws</strong> — Chinchilla: ~20 tokens/param compute-optimal. The basis for "small but well-trained."</li>
-        <li><strong>Efficiency / GPU systems</strong> — bf16, MFU, FlashAttention, a reading-level grasp of kernels (Triton) + parallelism. Know where time and memory go.</li>
-        <li><strong>Data</strong> — curation, filtering, dedup. Often beats architecture; the highest-leverage, least-glamorous variable.</li>
-        <li><strong>Optimization at scale</strong> — LR schedules, warmup, AdamW, <strong>Muon</strong>, gradient accumulation.</li>
-        <li><strong>The small-models toolkit</strong> — quantization (GPTQ/AWQ), distillation, pruning, efficient architectures.</li>
+        <li><strong>Scaling laws.</strong> Chinchilla: about 20 tokens per param is compute-optimal. The basis for "small but well-trained."</li>
+        <li><strong>Efficiency and GPU systems.</strong> bf16, MFU, FlashAttention, a reading-level grasp of kernels (Triton) and parallelism. Know where time and memory go.</li>
+        <li><strong>Data.</strong> Curation, filtering, dedup. It often beats architecture, and it's the highest-leverage, least-glamorous variable.</li>
+        <li><strong>Optimization at scale.</strong> LR schedules, warmup, AdamW, <strong>Muon</strong>, gradient accumulation.</li>
+        <li><strong>The small-models toolkit.</strong> Quantization (GPTQ/AWQ), distillation, pruning, efficient architectures.</li>
       </ul>
       <h4>Primary path</h4>
-      <p><a href="https://cs336.stanford.edu/" target="_blank" rel="noopener">Stanford CS336 — Language Modeling from Scratch (Spring 2026)</a> — the flagship. Free <a href="https://www.youtube.com/playlist?list=PLoROMvodv4rMqXOcazWaTUHhq-yembLCV" target="_blank" rel="noopener">lectures</a> + public <a href="https://github.com/stanford-cs336" target="_blank" rel="noopener">assignments</a>: tokenizer, FlashAttention2 in Triton, distributed training, Common-Crawl data, SFT+RL. <strong>Do the assignments.</strong> Plus <a href="https://github.com/KellerJordan/modded-nanogpt" target="_blank" rel="noopener">modded-nanogpt</a> (read the commit history like a textbook).</p>
-      <div class="callout note"><b>Deliverable — the important one</b> — reproduce a result on one GPU, then run ONE clean ablation (e.g. Muon vs AdamW) with ≥3 seeds + a same-size baseline. Ship repo + eval harness + plot + writeup. <strong>This artifact is your L2 credential.</strong> Pressure-test the design with the research-buddy first.</div>
+      <p>The flagship here is <a href="https://cs336.stanford.edu/" target="_blank" rel="noopener">Stanford CS336, Language Modeling from Scratch (Spring 2026)</a>. The <a href="https://www.youtube.com/playlist?list=PLoROMvodv4rMqXOcazWaTUHhq-yembLCV" target="_blank" rel="noopener">lectures</a> are free and the <a href="https://github.com/stanford-cs336" target="_blank" rel="noopener">assignments</a> are public: tokenizer, FlashAttention2 in Triton, distributed training, Common-Crawl data, SFT and RL. <strong>Do the assignments.</strong> Then read the <a href="https://github.com/KellerJordan/modded-nanogpt" target="_blank" rel="noopener">modded-nanogpt</a> commit history like a textbook.</p>
+      <div class="callout note"><b>Deliverable (the important one).</b> Reproduce a result on one GPU, then run ONE clean ablation (say, Muon vs AdamW) with at least 3 seeds and a same-size baseline. Ship the repo, the eval harness, a plot, and a writeup. <strong>This artifact is your L2 credential.</strong> Pressure-test the design with the research-buddy first.</div>
       <h4>Milestone</h4>
       <ul class="ms"><li>Explain Chinchilla, MFU; estimate train cost on your hardware.</li><li>Read a profiler trace and locate the bottleneck (compute/memory/IO).</li><li>Implement or clearly explain FlashAttention's idea (IO-aware exact attention).</li><li>Reproduce a published result on one GPU + a controlled ablation.</li></ul>
-      <div class="callout trap"><b>Traps</b> — lectures without assignments; chasing the 8×H100 speedrun record; confounded ablations (vary one thing, match the baseline, seed it); under-weighting data.</div>
+      <div class="callout trap"><b>Traps.</b> Lectures without assignments. Chasing the 8×H100 speedrun record. Confounded ablations (vary one thing, match the baseline, seed it). Under-weighting data.</div>
       <div class="pn"><a href="#phase-2">← Transformers</a><a href="#phase-4">Phase 4 · Post-training →</a></div>
     </section>
 
@@ -444,20 +465,20 @@
     <section id="phase-4" style="--ph:var(--p4)">
       <div class="sec-head"><span class="sec-num">4</span><h2 class="sec-title">Post-training &amp; evaluation</h2></div>
       <div class="sec-rule"></div>
-      <p class="dim"><span class="tag">≈ 4–8 weeks</span> How a raw pretrained model becomes useful — and how to measure it without fooling yourself. Most <em>applied</em> model research today is post-training + eval, and evaluation is the most under-respected skill in the field.</p>
+      <p class="dim"><span class="tag">≈ 4–8 weeks</span> How a raw pretrained model becomes useful, and how to measure it without fooling yourself. Most <em>applied</em> model research today is post-training and eval, and evaluation is the most under-respected skill in the field.</p>
       <h4>What to learn</h4>
       <ul class="clean">
-        <li><strong>SFT / instruction tuning</strong> — + LoRA/QLoRA for doing it cheaply on one GPU.</li>
-        <li><strong>Preference &amp; RL</strong> — RLHF, <strong>DPO</strong> (no separate reward model), <strong>GRPO/RLVR</strong> (RL from verifiable rewards — the reasoning frontier; DeepSeek's method, drops the value critic).</li>
-        <li><strong>Reward modeling</strong> — reward hacking; why a verifier with skin in the game can't be fair.</li>
-        <li><strong>Evaluation as a discipline</strong> — contamination, prompt sensitivity, metric≠behavior, comparative &gt; absolute. <em>The most important sub-topic here.</em></li>
+        <li><strong>SFT / instruction tuning.</strong> Use LoRA/QLoRA to do it cheaply on one GPU.</li>
+        <li><strong>Preference and RL.</strong> RLHF, <strong>DPO</strong> (no separate reward model), <strong>GRPO/RLVR</strong> (RL from verifiable rewards, the reasoning frontier, which is DeepSeek's method and drops the value critic).</li>
+        <li><strong>Reward modeling.</strong> Reward hacking, and why a verifier with skin in the game can't be fair.</li>
+        <li><strong>Evaluation as a discipline.</strong> Contamination, prompt sensitivity, metric≠behavior, comparative &gt; absolute. <em>The most important sub-topic here.</em></li>
       </ul>
       <h4>Primary path</h4>
-      <p>Nathan Lambert — <a href="https://rlhfbook.com/" target="_blank" rel="noopener">The RLHF Book</a> (free online) is your spine: the canonical recipe, DPO, the RLVR renaissance, reward modeling, eval. <a href="https://huggingface.co/docs/trl" target="_blank" rel="noopener">Hugging Face TRL</a> to actually post-train a small model.</p>
-      <div class="callout note"><b>Deliverable</b> — post-train a 0.5–1.5B model (SFT+LoRA → DPO or a small GRPO with a <em>verifiable</em> reward) and evaluate it <em>honestly</em>: clean harness, same-size baseline, a stated way your reward could be gamed and what the metric misses.</div>
+      <p>Your spine is Nathan Lambert's <a href="https://rlhfbook.com/" target="_blank" rel="noopener">The RLHF Book</a> (free online): the canonical recipe, DPO, the RLVR renaissance, reward modeling, eval. Use <a href="https://huggingface.co/docs/trl" target="_blank" rel="noopener">Hugging Face TRL</a> to actually post-train a small model.</p>
+      <div class="callout note"><b>Deliverable.</b> Post-train a 0.5 to 1.5B model (SFT with LoRA, then DPO, or a small GRPO with a <em>verifiable</em> reward) and evaluate it <em>honestly</em>: a clean harness, a same-size baseline, and a stated way your reward could be gamed plus what the metric misses.</div>
       <h4>Milestone</h4>
-      <ul class="ms"><li>Explain SFT vs DPO vs GRPO — what each optimizes, when to use which.</li><li>Describe reward hacking with a concrete example.</li><li>Name ≥3 ways an eval can lie.</li><li>Post-train a small model with TRL + an honest evaluation with a baseline.</li></ul>
-      <div class="callout trap"><b>Traps</b> — trusting your own numbers (assume the eval lies until checked); reaching for GRPO first (earn it with SFT+DPO); self-evaluation; metric tunnel-vision.</div>
+      <ul class="ms"><li>Explain SFT vs DPO vs GRPO. What each optimizes, and when to use which.</li><li>Describe reward hacking with a concrete example.</li><li>Name ≥3 ways an eval can lie.</li><li>Post-train a small model with TRL, plus an honest evaluation with a baseline.</li></ul>
+      <div class="callout trap"><b>Traps.</b> Trusting your own numbers (assume the eval lies until you've checked). Reaching for GRPO first (earn it with SFT and DPO). Letting a model grade its own work. Metric tunnel-vision.</div>
       <div class="pn"><a href="#phase-3">← Training &amp; systems</a><a href="#phase-5">Phase 5 · Research →</a></div>
     </section>
 
@@ -465,53 +486,87 @@
     <section id="phase-5" style="--ph:var(--p5)">
       <div class="sec-head"><span class="sec-num">5</span><h2 class="sec-title">Specialization &amp; doing research</h2></div>
       <div class="sec-rule"></div>
-      <p class="dim"><span class="tag">ongoing</span> Stop following a curriculum and start <em>doing research</em>: pick a niche, produce your first original result, engage a community, ship it publicly. The shift — from being assigned a task to choosing your own — is the definition of a researcher.</p>
+      <p class="dim"><span class="tag">ongoing</span> Stop following a curriculum and start <em>doing research</em>. Pick a niche, produce your first original result, engage a community, ship it publicly. That shift, from being handed a task to choosing your own, is the whole definition of a researcher.</p>
       <h4>1 · Pick a niche (go deep, not wide)</h4>
-      <p>Choose <strong>one</strong> where you can build a real result on one GPU: <strong>efficiency</strong> (quant/distill/prune), <strong>mechanistic interpretability</strong> (small models are interpretable; the community rewards small clean results — see <a href="https://arena.education" target="_blank" rel="noopener">ARENA</a> + <a href="https://github.com/TransformerLensOrg/TransformerLens" target="_blank" rel="noopener">TransformerLens</a>), <strong>data curation</strong>, or <strong>small reasoning / post-training</strong>. Your on-ramp doc is the detailed specialization guide.</p>
+      <p>Choose <strong>one</strong> where you can build a real result on one GPU: <strong>efficiency</strong> (quant/distill/prune), <strong>mechanistic interpretability</strong> (small models are interpretable; the community rewards small clean results, so see <a href="https://arena.education" target="_blank" rel="noopener">ARENA</a> + <a href="https://github.com/TransformerLensOrg/TransformerLens" target="_blank" rel="noopener">TransformerLens</a>), <strong>data curation</strong>, or <strong>small reasoning / post-training</strong>. Your on-ramp doc is the detailed specialization guide.</p>
       <h4>2 · Produce your first original result</h4>
       <ul class="clean">
         <li><strong>Reproduce</strong> something in your niche (the launchpad now, not the goal).</li>
-        <li><strong>Find the open thread</strong> — the cheap ablation the paper didn't run. Reading deeply <em>is</em> idea generation.</li>
+        <li><strong>Find the open thread.</strong> The cheap ablation the paper didn't run. Reading deeply <em>is</em> idea generation.</li>
         <li><strong>Scope it</strong> with the research-buddy: prior-art + feasibility + confound.</li>
-        <li><strong>Run it cleanly</strong> — one axis, ≥3 seeds, same-size baseline.</li>
-        <li><strong>Ship the artifact</strong> — open weights/code + reproducible eval + honest baselines + writeup. <em>Your L3 credential.</em></li>
+        <li><strong>Run it cleanly.</strong> One axis, ≥3 seeds, same-size baseline.</li>
+        <li><strong>Ship the artifact.</strong> Open weights/code + reproducible eval + honest baselines + writeup. <em>Your L3 credential.</em></li>
       </ul>
       <h4>3 · Get visible &amp; find your people</h4>
-      <p>Open-source-as-research is the modern credential. <strong><a href="https://www.eleuther.ai" target="_blank" rel="noopener">EleutherAI</a> (#research + the SOAR program)</strong> is the highest-ROI single move — collaborators, granted compute, and the arXiv-endorsement gate, solved at once. Realistic venues: the ICLR Blog Posts track, NeurIPS ENLSP workshop, the ML Reproducibility Challenge.</p>
-      <h4>Milestone — you're operating as a researcher (L3) when…</h4>
+      <p>Open-source-as-research is the modern credential. <strong><a href="https://www.eleuther.ai" target="_blank" rel="noopener">EleutherAI</a> (#research + the SOAR program)</strong> is the highest-ROI single move. It gets you collaborators, granted compute, and the arXiv-endorsement gate, all solved at once. Realistic venues: the ICLR Blog Posts track, NeurIPS ENLSP workshop, the ML Reproducibility Challenge.</p>
+      <h4>Milestone: you're operating as a researcher (L3) when…</h4>
       <ul class="ms"><li>You've shipped an original result with open code + honest eval, publicly.</li><li>Someone you don't know has used/cited/built on it.</li><li>You're active in a research community.</li><li>You can read a frontier paper and immediately see the next experiment.</li><li>You choose your own questions.</li></ul>
-      <div class="callout trap"><b>Traps</b> — niche-hopping (depth compounds; breadth doesn't); reaching for novelty too early (your first "original" is a clean extension); <em>building tools instead of doing research</em> (yes — including over-investing in the research-buddy); isolation.</div>
+      <div class="callout trap"><b>Traps.</b> Niche-hopping (depth compounds, breadth doesn't). Reaching for novelty too early (your first "original" is a clean extension). <em>Building tools instead of doing research</em> (yes, that includes over-investing in the research-buddy). Working alone in a corner.</div>
       <div class="pn"><a href="#phase-4">← Post-training</a><a href="#method">Research method →</a></div>
+    </section>
+
+    <!-- RL BRANCH -->
+    <section id="rl" style="--ph:var(--rl)">
+      <div class="sec-head"><span class="sec-num" style="color:var(--rl)">↺</span><h2 class="sec-title">The RL branch: Reinforcement Learning</h2></div>
+      <div class="sec-rule" style="--ph:var(--rl)"></div>
+      <p class="lead">A sibling to the LLM branch, off the <em>same trunk</em> (Phase 0–1 plus the research method). Same philosophy: build-first, reproduce before you innovate, artifacts over courses. This just adds the RL-specific theory the LLM phases don't teach.</p>
+
+      <h3>Two lanes, and which to pick</h3>
+      <div class="grid2">
+        <div class="card"><h4 style="margin-top:0">Classic deep RL</h4><p class="dim" style="margin:0">Games, robotics, control. The older lineage. <strong>Harder solo.</strong> It's sample-inefficient, hungry for compute and wall-clock, brittle, and it has a real reproducibility problem (<em>"Deep RL That Matters"</em>). Pick it for love of the control problem, not for tractability.</p></div>
+        <div class="card" style="border-left:3px solid var(--rl)"><h4 style="margin-top:0">RL-for-LLMs / RLVR ★</h4><p class="dim" style="margin:0">Reasoning models. Hottest area, most jobs, and <strong>most tractable on one GPU</strong>, because it reuses your whole LLM skillset. This is the lane to take unless robots and games are the dream.</p></div>
+      </div>
+      <div class="callout trap"><b>Build-first warning.</b> Even veterans call Sutton &amp; Barto a slog. Do NOT read it cover-to-cover first. Ship a working agent early (HF Deep RL course or CleanRL), hit a wall, then pull the theory in. RL punishes "learn everything first" harder than any branch.</div>
+
+      <h3>The phases</h3>
+      <div class="card" style="--ph:var(--rl)"><span class="tag" style="--ph:var(--rl)">RL-0 · days</span><strong> Orientation</strong><p class="dim" style="margin:6px 0 0">Train one working agent before you understand it (HF Deep RL course, Unit 1, on Gymnasium + Stable-Baselines3). Pick your lane. <em>Artifact:</em> a reward curve in your repo. <em>Trap:</em> starting with Sutton &amp; Barto ch.1. Train something first.</p></div>
+      <div class="card" style="--ph:var(--rl)"><span class="tag" style="--ph:var(--rl)">RL-1 · 4–6 wk</span><strong> Foundations, the "micrograd of RL"</strong><p class="dim" style="margin:6px 0 0"><em>Learn:</em> MDPs, returns, value functions (V/Q), Bellman, dynamic programming, exploration vs exploitation, tabular Q-learning/SARSA/TD. <em>Primary:</em> Sutton &amp; Barto Part I + David Silver lectures (read alongside code). <em>Artifact:</em> tabular Q-learning from a blank file on a gridworld/FrozenLake. <em>Trap:</em> jumping to deep RL before tabular intuition.</p></div>
+      <div class="card" style="--ph:var(--rl)"><span class="tag" style="--ph:var(--rl)">RL-2 · 8–12 wk · L2 credential</span><strong> Deep RL</strong><p class="dim" style="margin:6px 0 0"><em>Learn:</em> function approximation, DQN, policy gradients (REINFORCE), actor-critic, <strong>PPO</strong> (know it cold), then SAC/DDPG/TD3. <em>Primary:</em> OpenAI Spinning Up + CleanRL (reproduce the single-file impls) + Gymnasium + Stable-Baselines3. <em>Artifact:</em> reproduce PPO on CartPole→LunarLander + one clean ablation, ≥3 seeds. <em>Trap:</em> reproducibility hell. RL variance is brutal, and one seed is a lie.</p></div>
+      <div class="card" style="--ph:var(--accent); border-left:3px solid var(--accent)"><span class="tag" style="--ph:var(--accent)">RL-3 · 4–8 wk · = LLM Phase 4</span><strong> The LLM intersection: RLHF / GRPO / RLVR</strong><p class="dim" style="margin:6px 0 0">Where this branch rejoins the LLM track. <em>Learn:</em> reward modeling and hacking, RLHF (PPO-for-LLMs), DPO, GRPO (DeepSeek, critic-free, group-normalized), RLVR (verifiable rewards). <em>Primary:</em> the <a href="https://rlhfbook.com" target="_blank" rel="noopener">RLHF Book</a> + TRL + Open-Reasoner-Zero/DAPO. <em>Artifact:</em> a small GRPO/RLVR run on a 0.5–1.5B model with a verifiable reward + honest eval. <em>Trap:</em> GRPO is finicky (KL, reward hacking, vLLM), so earn it with SFT and DPO first. And watch the RLVR debate ("faster, not smarter"), so you don't overclaim.</p></div>
+      <div class="card" style="--ph:var(--rl)"><span class="tag" style="--ph:var(--rl)">RL-4 · ongoing · L3</span><strong> Specialization &amp; research</strong><p class="dim" style="margin:6px 0 0">Pick one lane and ship an original result: RL-for-reasoning (most tractable solo) · small-scale classic deep RL · model-based · offline RL · exploration · <strong>multi-agent RL (MARL)</strong>, which is the <em>real</em> multi-agent RL, not LLM-orchestration. Reproduction-as-contribution counts here (RL's reproducibility crisis makes a clean seeded repro genuinely valuable).</p></div>
+
+      <div class="pull" style="border-left-color:var(--rl); background:color-mix(in srgb, var(--rl) 7%, var(--bg-2))">For a solo researcher on one GPU, take the RLVR and reasoning lane (RL-3). It's the frontier, the compute is cheap-ish, and it reuses your LLM track. Classic deep RL is worthy but less forgiving. Same trunk, same method. The branch is different, but the work is the same.</div>
+
+      <h4>RL resources (verified)</h4>
+      <ul class="clean" style="font-size:14.5px">
+        <li><a href="https://huggingface.co/learn/deep-rl-course/" target="_blank" rel="noopener">HF Deep RL Course</a> <span class="dim">· start here (RL-0)</span></li>
+        <li>Sutton &amp; Barto, <em>Reinforcement Learning: An Introduction</em> (free) + David Silver lectures <span class="dim">· RL-1</span></li>
+        <li><a href="https://spinningup.openai.com" target="_blank" rel="noopener">OpenAI Spinning Up</a> + <a href="https://github.com/vwxyzjn/cleanrl" target="_blank" rel="noopener">CleanRL</a> + <a href="https://gymnasium.farama.org" target="_blank" rel="noopener">Gymnasium</a> + Stable-Baselines3 <span class="dim">· RL-2</span></li>
+        <li><a href="https://rlhfbook.com" target="_blank" rel="noopener">RLHF Book</a> + HF TRL + Open-Reasoner-Zero/DAPO <span class="dim">· RL-3 (shared with LLM Phase 4)</span></li>
+      </ul>
+      <p class="dim" style="font-size:13.5px">Full detail in <code>rl-track.md</code>.</p>
+
+      <div class="pn"><a href="#phase-5">← Specialization</a><a href="#method">Research method →</a></div>
     </section>
 
     <!-- METHOD -->
     <section id="method" style="--ph:var(--accent)">
-      <div class="sec-head"><span class="sec-num">✦</span><h2 class="sec-title">Research method — the craft</h2></div>
+      <div class="sec-head"><span class="sec-num">✦</span><h2 class="sec-title">Research method: the craft</h2></div>
       <div class="sec-rule"></div>
       <p>Learning ML and <em>being a researcher</em> are different skills. This is the second one: how to read, reproduce, experiment, write, and not fool yourself. <strong>Start it in week 1.</strong></p>
-      <div class="pull">The research loop: question → hypothesis → minimal experiment → result → interpret skeptically → write it down → next question. Keep each turn small. Iteration speed — not raw intelligence — separates productive researchers from stuck ones.</div>
+      <div class="pull">The research loop: question → hypothesis → minimal experiment → result → interpret skeptically → write it down → next question. Keep each turn small. It's iteration speed, not raw intelligence, that separates productive researchers from stuck ones.</div>
       <div class="grid2">
-        <div class="card"><h4 style="margin-top:0">Reading papers</h4><p class="dim" style="margin:0">Multi-pass: skim (figures + results, 5 min) → method + baseline (15–30) → deep only for the few that matter. <strong>Always write a 3-sentence note.</strong> Read with the right question: not "is this true?" but <em>"how was this measured, and how could it be wrong?"</em> — that's most of taste. 2–3/week, forever.</p></div>
-        <div class="card"><h4 style="margin-top:0">Reproduction</h4><p class="dim" style="margin:0">Where most learning + credibility come from — and a valued contribution in its own right. Reproduce before you extend. Containerize (Docker/uv). When your numbers don't match the paper, <em>that gap is the most educational thing in the process</em>.</p></div>
-        <div class="card"><h4 style="margin-top:0">Experiment design</h4><p class="dim" style="margin:0">One independent variable. The right (same-size) baseline. ≥3 seeds. Ablate with/without the component. Control confounds (match params <em>and</em> FLOPs; disjoint calibration/eval). <strong>Pre-register</strong> what would confirm/refute — before you run it.</p></div>
-        <div class="card"><h4 style="margin-top:0">The research log</h4><p class="dim" style="margin:0">A dated <code>LOG.md</code>: what I tried, what happened, what I learned, what's next. Your external memory and the raw material of every writeup. Start Phase 0; never skip.</p></div>
-        <div class="card"><h4 style="margin-top:0">Writing</h4><p class="dim" style="margin:0">Unwritten research barely exists. Write to <em>find your errors</em> — if you can't write it clearly, you don't understand it. State limitations honestly; it builds more credibility than overclaiming. Teach to learn.</p></div>
-        <div class="card"><h4 style="margin-top:0">Feedback &amp; taste</h4><p class="dim" style="margin:0">Seek harsh feedback early — the person who finds your confound is doing you a favor. Adversarially self-review: before believing a result, try to <em>refute</em> it. Taste is pattern-matching built by volume; you can't shortcut it, only run the loop faster.</p></div>
+        <div class="card"><h4 style="margin-top:0">Reading papers</h4><p class="dim" style="margin:0">Multi-pass: skim (figures + results, 5 min) → method + baseline (15–30) → deep only for the few that matter. <strong>Always write a 3-sentence note.</strong> Read with the right question. Not "is this true?" but <em>"how was this measured, and how could it be wrong?"</em> That question is most of taste. Read 2–3 a week, forever.</p></div>
+        <div class="card"><h4 style="margin-top:0">Reproduction</h4><p class="dim" style="margin:0">Most of your learning and credibility come from here, and it's a valued contribution in its own right. Reproduce before you extend. Containerize (Docker/uv). When your numbers don't match the paper, <em>that gap is the most educational thing in the process</em>.</p></div>
+        <div class="card"><h4 style="margin-top:0">Experiment design</h4><p class="dim" style="margin:0">One independent variable. The right (same-size) baseline. ≥3 seeds. Ablate with and without the component. Control confounds (match params <em>and</em> FLOPs, keep calibration and eval disjoint). <strong>Pre-register</strong> what would confirm or refute it, before you run it.</p></div>
+        <div class="card"><h4 style="margin-top:0">The research log</h4><p class="dim" style="margin:0">A dated <code>LOG.md</code>: what I tried, what happened, what I learned, what's next. It's your external memory and the raw material of every writeup. Start it in Phase 0, and never skip.</p></div>
+        <div class="card"><h4 style="margin-top:0">Writing</h4><p class="dim" style="margin:0">Unwritten research barely exists. Write to <em>find your errors</em>. If you can't write it clearly, you don't understand it. State limitations honestly. It builds more credibility than overclaiming. Teach to learn.</p></div>
+        <div class="card"><h4 style="margin-top:0">Feedback &amp; taste</h4><p class="dim" style="margin:0">Seek harsh feedback early. The person who finds your confound is doing you a favor. Before you believe a result, try to <em>refute</em> it. Taste is pattern-matching built by volume. You can't shortcut it, you can only run the loop faster.</p></div>
       </div>
-      <div class="callout note"><b>The honest meta-point</b> — in building this very project, the assistant confidently called a real API "hallucinated" — false, caught only because someone pushed back and actually checked. That's the whole discipline in one anecdote: <strong>confidence is not evidence; verify, and prefer being corrected to being wrong.</strong></div>
+      <div class="callout note"><b>The honest meta-point.</b> While building this very project, the assistant confidently called a real API "hallucinated." It was false, and got caught only because someone pushed back and actually checked. That's the whole discipline in one anecdote: <strong>confidence is not evidence. Verify, and prefer being corrected to being wrong.</strong></div>
     </section>
 
     <!-- RESOURCES -->
     <section id="resources" style="--ph:var(--info)">
       <div class="sec-head"><span class="sec-num" style="color:var(--info)">❖</span><h2 class="sec-title">Resources</h2></div>
       <div class="sec-rule" style="--ph:var(--info)"></div>
-      <p class="dim">Curated, not exhaustive — <strong>one primary per phase, go deep.</strong> Collecting resources is procrastination; finishing one is progress.</p>
-      <h4>Hands-on (the spine — do these)</h4>
+      <p class="dim">Curated, not exhaustive. <strong>One primary per phase, and go deep.</strong> Collecting resources is procrastination. Finishing one is progress.</p>
+      <h4>Hands-on (the spine, do these)</h4>
       <table>
         <tr><th>Resource</th><th>Phase</th><th>What</th></tr>
-        <tr><td><a href="https://karpathy.ai/zero-to-hero.html" target="_blank" rel="noopener">Karpathy — Zero to Hero</a></td><td><span class="pz">1–2</span></td><td>From-scratch: micrograd, makemore, build-GPT.</td></tr>
+        <tr><td><a href="https://karpathy.ai/zero-to-hero.html" target="_blank" rel="noopener">Karpathy's Zero to Hero</a></td><td><span class="pz">1–2</span></td><td>From-scratch: micrograd, makemore, build-GPT.</td></tr>
         <tr><td><a href="https://github.com/karpathy/nanoGPT" target="_blank" rel="noopener">nanoGPT</a> / <a href="https://github.com/karpathy/nanochat" target="_blank" rel="noopener">nanochat</a></td><td><span class="pz">2</span></td><td>Minimal GPT to study; full modern stack end-to-end.</td></tr>
-        <tr><td><a href="https://github.com/rasbt/LLMs-from-scratch" target="_blank" rel="noopener">Raschka — Build an LLM from Scratch</a></td><td><span class="pz">2</span></td><td>Thorough code-first book + repo.</td></tr>
+        <tr><td><a href="https://github.com/rasbt/LLMs-from-scratch" target="_blank" rel="noopener">Raschka's Build an LLM from Scratch</a></td><td><span class="pz">2</span></td><td>Thorough code-first book + repo.</td></tr>
         <tr><td><a href="https://course.fast.ai" target="_blank" rel="noopener">fast.ai</a> / <a href="https://d2l.ai" target="_blank" rel="noopener">d2l.ai</a></td><td><span class="pz">0–3</span></td><td>Build-first DL course; interactive textbook (reference).</td></tr>
         <tr><td><a href="https://cs336.stanford.edu/" target="_blank" rel="noopener">Stanford CS336 (Spring 2026)</a></td><td><span class="pz">3–4</span></td><td>The systems flagship. Free lectures + assignments.</td></tr>
         <tr><td><a href="https://huggingface.co/docs/trl" target="_blank" rel="noopener">Hugging Face TRL</a></td><td><span class="pz">4</span></td><td>Practical SFT / DPO / GRPO toolkit.</td></tr>
@@ -520,20 +575,20 @@
       </table>
       <h4>Books &amp; long-form</h4>
       <ul class="clean">
-        <li><a href="https://rlhfbook.com/" target="_blank" rel="noopener">The RLHF Book — Nathan Lambert</a> <span class="dim">(Phase 4; free online)</span></li>
-        <li><a href="https://mml-book.github.io" target="_blank" rel="noopener">Mathematics for ML — Deisenroth et al.</a> <span class="dim">(Phase 1; math reference, free)</span></li>
-        <li><a href="https://www.deeplearningbook.org" target="_blank" rel="noopener">Deep Learning — Goodfellow et al.</a> <span class="dim">(theory reference; dip in)</span></li>
+        <li><a href="https://rlhfbook.com/" target="_blank" rel="noopener">The RLHF Book, by Nathan Lambert</a> <span class="dim">(Phase 4; free online)</span></li>
+        <li><a href="https://mml-book.github.io" target="_blank" rel="noopener">Mathematics for ML, Deisenroth et al.</a> <span class="dim">(Phase 1; math reference, free)</span></li>
+        <li><a href="https://www.deeplearningbook.org" target="_blank" rel="noopener">Deep Learning, Goodfellow et al.</a> <span class="dim">(theory reference; dip in)</span></li>
       </ul>
       <h4>People / newsletters (signal, low noise)</h4>
       <ul class="clean">
-        <li><a href="https://magazine.sebastianraschka.com/" target="_blank" rel="noopener">Sebastian Raschka — Ahead of AI</a> <span class="dim">(highest signal; annual reading lists)</span></li>
-        <li><a href="https://lilianweng.github.io/" target="_blank" rel="noopener">Lilian Weng</a> <span class="dim">(deep technical explainers)</span> · <a href="https://www.neelnanda.io/" target="_blank" rel="noopener">Neel Nanda</a> <span class="dim">(mech interp)</span> · Nathan Lambert — Interconnects <span class="dim">(post-training)</span></li>
+        <li><a href="https://magazine.sebastianraschka.com/" target="_blank" rel="noopener">Sebastian Raschka's Ahead of AI</a> <span class="dim">(highest signal; annual reading lists)</span></li>
+        <li><a href="https://lilianweng.github.io/" target="_blank" rel="noopener">Lilian Weng</a> <span class="dim">(deep technical explainers)</span> · <a href="https://www.neelnanda.io/" target="_blank" rel="noopener">Neel Nanda</a> <span class="dim">(mech interp)</span> · Nathan Lambert's Interconnects <span class="dim">(post-training)</span></li>
       </ul>
       <h4>Community, compute, venues</h4>
       <ul class="clean">
-        <li><strong><a href="https://www.eleuther.ai" target="_blank" rel="noopener">EleutherAI</a></strong> — #research + SOAR. The highest-ROI single move.</li>
-        <li><strong>Compute</strong> — free Colab/Kaggle → Vast/RunPod community tiers → granted (TPU Research Cloud, academic credits).</li>
-        <li><strong>Venues for independents</strong> — ICLR Blog Posts track · NeurIPS ENLSP · ML Reproducibility Challenge. Not the main-track lottery.</li>
+        <li><strong><a href="https://www.eleuther.ai" target="_blank" rel="noopener">EleutherAI</a>.</strong> #research + SOAR. The highest-ROI single move.</li>
+        <li><strong>Compute.</strong> Free Colab/Kaggle → Vast/RunPod community tiers → granted (TPU Research Cloud, academic credits).</li>
+        <li><strong>Venues for independents.</strong> ICLR Blog Posts track · NeurIPS ENLSP · ML Reproducibility Challenge. Not the main-track lottery.</li>
       </ul>
     </section>
 
@@ -553,7 +608,7 @@
     <section id="provenance" style="--ph:var(--warn)">
       <div class="sec-head"><span class="sec-num" style="color:var(--warn)">⚐</span><h2 class="sec-title">Provenance &amp; verification</h2></div>
       <div class="sec-rule" style="--ph:var(--warn)"></div>
-      <p>How this was built, and how much to trust each part — because the right answer to "is this reliable?" is to show the receipts, not assert.</p>
+      <p>How this was built, and how much to trust each part. Because the right answer to "is this reliable?" is to show the receipts, not to assert.</p>
       <div class="tier t1">
         <div class="h">Tier 1 · Verified</div>
         <p style="margin:0">Resources and facts checked against live 2026 sources, plus a chunk adversarially fact-checked earlier. Load-bearing technical claims confirmed:</p>
@@ -571,9 +626,9 @@
       </div>
       <div class="tier t3">
         <div class="h">Tier 3 · Editorial judgment</div>
-        <p style="margin:0">The <strong>pedagogical architecture</strong> — the six phases, the L0–L4 ladder, the phase boundaries, the time estimates. A synthesis of how the field's best teachers say to learn (Karpathy, fast.ai, CS336, the reproducibility literature) — well-grounded because that consensus is strong and convergent, but it's a considered opinion, not a cited authority. Pressure-test the structure against any working researcher.</p>
+        <p style="margin:0">The <strong>pedagogical architecture</strong>: the six phases, the L0 to L4 ladder, the phase boundaries, the time estimates. It's a synthesis of how the field's best teachers say to learn (Karpathy, fast.ai, CS336, the reproducibility literature). It's well-grounded, because that consensus is strong and convergent, but it's still a considered opinion, not a cited authority. Pressure-test the structure against any working researcher.</p>
       </div>
-      <p class="dim" style="font-size:13.5px; margin-top:16px">Bottom line: the direction is trustworthy and the concrete facts are verified; the exact phase math deserves a pinch of salt. Verify cheaply — every link is real, and the structure survives a five-minute sanity check with the EleutherAI #research community.</p>
+      <p class="dim" style="font-size:13.5px; margin-top:16px">Bottom line: the direction is trustworthy and the concrete facts are verified. The exact phase math deserves a pinch of salt. And it's cheap to check. Every link is real, and the structure survives a five-minute sanity check with the EleutherAI #research community.</p>
     </section>
   </main>
 </div>
@@ -620,7 +675,9 @@
     { id:'p4', name:'Phase 4 · Post-training & eval', c:'var(--p4)', items:[
       'Can explain SFT vs DPO vs GRPO','Can describe reward hacking with an example','Can name ≥3 ways an eval lies','Post-trained a small model with TRL','Built an honest eval harness + same-size baseline → L2 reached'] },
     { id:'p5', name:'Phase 5 · Specialization & research  → L3', c:'var(--p5)', items:[
-      'Chose ONE niche; read its papers in full','Reproduced something in the niche','Found an open thread yourself','Scoped it with the research-buddy','Shipped an original result publicly','Someone you don’t know used/cited it','Active in a community (SOAR or similar)','Choosing your own questions'] }
+      'Chose ONE niche; read its papers in full','Reproduced something in the niche','Found an open thread yourself','Scoped it with the research-buddy','Shipped an original result publicly','Someone you don’t know used/cited it','Active in a community (SOAR or similar)','Choosing your own questions'] },
+    { id:'rl', name:'RL branch (optional) · reinforcement learning', c:'var(--rl)', items:[
+      'RL-0: trained an agent (HF Deep RL course); picked a lane','RL-1: tabular Q-learning from a blank file','RL-1: can explain MDP, Bellman, value vs policy','RL-2: reproduced PPO on classic control (CleanRL)','RL-2: one clean ablation, ≥3 seeds','RL-3: small GRPO/RLVR run + honest eval','RL-4: shipped an original RL result publicly'] }
   ];
   var ckRoot = document.getElementById('ckRoot');
   var KEY = 'rtm-progress';

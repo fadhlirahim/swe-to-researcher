@@ -80,5 +80,6 @@ notes which phase it serves. Verified current as of 2026-06.
 - **Phase 3:** CS336 is your primary — *do the assignments*. modded-nanogpt + the canonical papers around it.
 - **Phase 4:** The RLHF Book + TRL.
 - **Phase 5:** the on-ramp + (if interpretability) ARENA.
+- **RL branch (separate track):** see [`rl-track.md`](rl-track.md) — Hugging Face Deep RL course → Sutton & Barto + David Silver → Spinning Up + CleanRL + Gymnasium → RLHF Book / GRPO / RLVR. Its own self-contained resource table is in that file.
 
 One primary per phase. Everything else is a reference, not a queue.
