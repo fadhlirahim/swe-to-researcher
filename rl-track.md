@@ -68,7 +68,7 @@ Same template as the LLM track: goal → what to learn → primary path → the 
 
 ### RL-3 — The LLM intersection: RLHF / GRPO / RLVR (≈ 4–8 wk)
 **Goal:** the cheap-compute, high-energy lane — and the point where this branch rejoins the LLM track (this *is* Phase 4).
-- **Learn:** reward modeling (+ reward hacking), **PPO-for-LLMs (RLHF)**, **DPO** (no reward model), **GRPO** (DeepSeek — critic-free, group-normalized advantages over 8–64 sampled traces), and **RLVR** (verifiable rewards: math/code where correctness is auto-checkable). The o1 / DeepSeek-R1 / Qwen lineage.
+- **Learn:** reward modeling (+ reward hacking), **PPO-for-LLMs (RLHF)**, **DPO** (no reward model), **GRPO** (DeepSeek — critic-free, group-normalized advantages over 8–64 sampled traces), and **RLVR** (verifiable rewards: math/code where correctness is auto-checkable). The o1 / [DeepSeek-R1](https://arxiv.org/abs/2501.12948) / Qwen lineage.
 - **Primary path:** **The RLHF Book** ([rlhfbook.com](https://rlhfbook.com), free) + **HF TRL** (SFT/DPO/GRPO toolkit) + CS336's RL assignment + the open frameworks (Open-Reasoner-Zero, DAPO) and the "Post-Training in 2026" landscape.
 - **The artifact:** a small **GRPO/RLVR run on a 0.5–1.5B model** with a *programmatic/verifiable* reward (a math or formatting task) + an honest eval with a same-size baseline.
 - **Milestone:** explain RLHF vs DPO vs GRPO and what each optimizes; run a small RLVR loop; critique an RL-for-reasoning paper's evaluation.
@@ -97,6 +97,8 @@ Lanes (depth over breadth — pick one):
 | [Gymnasium (Farama)](https://gymnasium.farama.org) | RL-0–2 | Standard env interface (successor to OpenAI Gym). |
 | Stable-Baselines3 | RL-0–2 | Trusted PyTorch baselines. |
 | [The RLHF Book](https://rlhfbook.com) + HF TRL | RL-3 | The RL/LLM intersection (RLHF/DPO/GRPO/RLVR). |
+| [RL Field Manual](https://rl.paraz.in/#frontier) | RL-3 | Interactive guide to LLM reinforcement learning; the `#frontier` section covers RLVR / reasoning. |
+| [DeepSeek-R1](https://arxiv.org/abs/2501.12948) | RL-3 | The RLVR/GRPO reasoning result that defined the frontier. |
 | Open-Reasoner-Zero · DAPO · "Post-Training 2026" survey | RL-3–4 | Open RLVR frameworks + current landscape. |
 
 ---

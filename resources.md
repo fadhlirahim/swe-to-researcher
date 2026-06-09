@@ -15,8 +15,10 @@ notes which phase it serves. Verified current as of 2026-06.
 | Resource | Phase | What it is | Link |
 |---|---|---|---|
 | **Karpathy — Neural Networks: Zero to Hero** | 1–2 | The canonical from-scratch course: micrograd, makemore, build-GPT. Do the exercises. | karpathy.ai/zero-to-hero.html |
+| **3Blue1Brown's Neural Networks series** | 1 | The best visual intuition for nets, gradients, and backprop. Watch when a concept won't click. | [youtube.com](https://www.youtube.com/watch?v=aircAruvnKk&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) |
 | **nanoGPT** | 2 | Clean minimal GPT to study + train. | github.com/karpathy/nanoGPT |
 | **nanochat** | 2 | The full modern stack end-to-end (tokenizer→pretrain→SFT→eval→UI). | github.com/karpathy/nanochat |
+| **The Illustrated Transformer (Jay Alammar)** | 2 | Visual walk through attention; read alongside the code. | jalammar.github.io/illustrated-transformer |
 | **Sebastian Raschka — Build an LLM (From Scratch)** | 2 | Thorough code-first book + repo (incl. GPT-2→Llama, Qwen-from-scratch). | github.com/rasbt/LLMs-from-scratch |
 | **fast.ai — Practical Deep Learning** | 0–1 | Top-down, build-first DL course. Free. | course.fast.ai |
 | **Dive into Deep Learning (d2l.ai)** | 1–3 | Free interactive textbook; use as reference. | d2l.ai |
@@ -39,13 +41,16 @@ notes which phase it serves. Verified current as of 2026-06.
 
 | Paper | Phase | Why |
 |---|---|---|
-| Attention Is All You Need | 2 | The transformer. |
+| [Attention Is All You Need](https://arxiv.org/abs/1706.03762) | 2 | The transformer. |
+| [GPT-1 — Improving Language Understanding by Generative Pre-Training](https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf) | 2 | The generative-pretraining lineage (OpenAI report, not on arXiv). |
+| [BERT](https://arxiv.org/abs/1810.04805) | 2 | Bidirectional pre-training; the other 2018 transformer milestone. |
 | Chinchilla — Training Compute-Optimal LLMs | 3 | Scaling laws; "small but well-trained." |
 | FlashAttention | 3 | Memory-efficient attention; the systems mindset. |
 | GPTQ / AWQ | 3 | Post-training quantization. |
 | Distilling the Knowledge in a Neural Network (Hinton) + Sequence-Level KD (Kim & Rush) | 3 | Distillation foundations. |
 | TinyStories → Phi-1.5 → Phi-3 → SmolLM | 3 | The data-quality thread; small-model recipes. |
 | InstructGPT / RLHF + DPO + a GRPO/RLVR paper | 4 | The post-training lineage. |
+| [DeepSeek-R1](https://arxiv.org/abs/2501.12948) | 4 / RL-3 | RL for reasoning (RLVR); the GRPO breakthrough. |
 | Anthropic — Transformer Circuits / induction heads | 5 (interp) | Mech-interp foundations. |
 
 (Find exact links via Semantic Scholar/arXiv — or use the `../research-buddy` `litsearch.py` tool.)
@@ -80,6 +85,6 @@ notes which phase it serves. Verified current as of 2026-06.
 - **Phase 3:** CS336 is your primary — *do the assignments*. modded-nanogpt + the canonical papers around it.
 - **Phase 4:** The RLHF Book + TRL.
 - **Phase 5:** the on-ramp + (if interpretability) ARENA.
-- **RL branch (separate track):** see [`rl-track.md`](rl-track.md) — Hugging Face Deep RL course → Sutton & Barto + David Silver → Spinning Up + CleanRL + Gymnasium → RLHF Book / GRPO / RLVR. Its own self-contained resource table is in that file.
+- **RL branch (separate track):** see [`rl-track.md`](rl-track.md) — Hugging Face Deep RL course → Sutton & Barto + David Silver → Spinning Up + CleanRL + Gymnasium → RLHF Book / GRPO / RLVR. Its own self-contained resource table is in that file. Also worth following: the [RL Field Manual](https://rl.paraz.in/#frontier), an interactive guide to LLM reinforcement learning (good for the RL-3 frontier).
 
 One primary per phase. Everything else is a reference, not a queue.

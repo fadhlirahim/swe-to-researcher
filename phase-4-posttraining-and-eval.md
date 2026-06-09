@@ -23,6 +23,7 @@ recurring source of "results" that turn out to be measurement artifacts.
 - **Hugging Face TRL** (library + docs/cookbook) — the practical toolkit for SFT, DPO, and GRPO. Use it to actually post-train a small model.
 - **CS336's post-training assignment** (from Phase 3) — SFT + RL for math reasoning + optional DPO, implemented rather than imported. If you did it in Phase 3, deepen it here.
 - **Evaluation reading** — find recent work on benchmark contamination and eval pitfalls; treat "how was this measured?" as the first question of every paper you read.
+- **Key paper:** [DeepSeek-R1](https://arxiv.org/abs/2501.12948). The RL-for-reasoning (RLVR/GRPO) result that defined the current frontier. Use it as your "small reasoning model" paper for the milestone below.
 
 ## The project / deliverable
 **Post-train a small model (0.5–1.5B) and evaluate it honestly.** Concretely: take a small

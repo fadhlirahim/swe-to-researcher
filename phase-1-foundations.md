@@ -28,6 +28,7 @@ and could write it myself."
   - **makemore** — a character-level language model, taken from a bigram count model up through an MLP. Bridges ML basics → language modeling and sets up Phase 2.
 - **One breadth source, as reference (not cover-to-cover):** **fast.ai Practical Deep Learning** (top-down, build-first) *or* **d2l.ai** (interactive textbook). Use to fill gaps Karpathy doesn't cover. Andrew Ng's ML Specialization is a fine, gentler alternative if you want more hand-holding on the ML fundamentals.
 - **Math reference (look up, don't read linearly):** *Mathematics for Machine Learning* (Deisenroth et al., free PDF). Open it only when a concept above is fuzzy.
+- **Visual intuition:** [3Blue1Brown's Neural Networks series](https://www.youtube.com/watch?v=aircAruvnKk&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi). The best visual explainer for nets, gradients, and backprop. Watch the matching chapter when something won't click.
 
 ## The project / deliverable
 **Reimplement micrograd and makemore yourself, from scratch, in your repo** — not by copying,

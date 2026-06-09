@@ -23,6 +23,12 @@ foundation for every research idea you'll later have.
 - **Karpathy — "Let's build GPT" + nanoGPT.** Build a GPT from a blank file, then study `nanoGPT` as the clean reference implementation. Train it on tiny-shakespeare, then on a slightly bigger corpus. This is your attention-from-scratch deliverable.
 - **Sebastian Raschka — *Build a Large Language Model (From Scratch)* (book + repo).** The most thorough, code-first walk through every component, including loading real pretrained weights (GPT-2 → Llama). Excellent companion to nanoGPT; use it to go deeper on the parts Karpathy moves quickly through. The repo also has GPT-2→Llama and Qwen-from-scratch conversions.
 - **Karpathy — nanochat.** Reproduce the *entire* modern stack end-to-end once: tokenizer → pretrain → mid-train → SFT → (optional RL) → eval → a chat UI. The resulting model is weak ("$100 ChatGPT" is marketing), but running the whole pipeline once is the point — it makes Phases 3–4 concrete.
+- **Jay Alammar — [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/).** The clearest visual explainer of how attention moves information through the model. Read it alongside the code whenever the mechanism feels abstract.
+
+## Foundational papers (read them, don't just cite them)
+- [Attention Is All You Need](https://arxiv.org/abs/1706.03762). The Transformer. The one paper to actually read this phase.
+- [GPT-1: Improving Language Understanding by Generative Pre-Training](https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf). The generative-pretraining idea (OpenAI report, never put on arXiv).
+- [BERT](https://arxiv.org/abs/1810.04805). Bidirectional pre-training, the other 2018 transformer milestone.
 
 ## The project / deliverable
 **Train a small GPT from a blank file and write up one thing you investigated.** Beyond just

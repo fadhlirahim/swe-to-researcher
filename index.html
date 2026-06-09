@@ -409,7 +409,7 @@
         <li><strong>Math, just-in-time.</strong> Linear algebra, the chain rule, probability/cross-entropy/KL. Learn each one <em>when a model forces you to</em>.</li>
       </ul>
       <h4>Primary path</h4>
-      <p><a href="https://karpathy.ai/zero-to-hero.html" target="_blank" rel="noopener">Karpathy's Neural Networks: Zero to Hero</a> is the spine. <strong>Do the exercises.</strong> Build <strong>micrograd</strong> (a tiny autodiff engine, and this <em>is</em> backprop) and <strong>makemore</strong> (a char-level LM). For breadth, keep <a href="https://course.fast.ai" target="_blank" rel="noopener">fast.ai</a> or <a href="https://d2l.ai" target="_blank" rel="noopener">d2l.ai</a> handy. For math, look things up in <a href="https://mml-book.github.io" target="_blank" rel="noopener">Mathematics for ML</a> when you need them.</p>
+      <p><a href="https://karpathy.ai/zero-to-hero.html" target="_blank" rel="noopener">Karpathy's Neural Networks: Zero to Hero</a> is the spine. <strong>Do the exercises.</strong> Build <strong>micrograd</strong> (a tiny autodiff engine, and this <em>is</em> backprop) and <strong>makemore</strong> (a char-level LM). For breadth, keep <a href="https://course.fast.ai" target="_blank" rel="noopener">fast.ai</a> or <a href="https://d2l.ai" target="_blank" rel="noopener">d2l.ai</a> handy. For math, look things up in <a href="https://mml-book.github.io" target="_blank" rel="noopener">Mathematics for ML</a> when you need them. And when a concept won't click, watch the matching chapter of <a href="https://www.youtube.com/watch?v=aircAruvnKk&amp;list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi" target="_blank" rel="noopener">3Blue1Brown's Neural Networks series</a>. It's the best visual intuition for nets and backprop there is.</p>
       <div class="callout note"><b>Deliverable.</b> Reimplement micrograd and makemore from memory (not copy-paste), pushed with READMEs. Bonus: write a "what backprop actually computes" explainer. Teaching it is how you find the holes in your understanding.</div>
       <h4>Milestone: you've finished when you can…</h4>
       <ul class="ms"><li>Implement reverse-mode autodiff from a blank file, and hand-derive one gradient to check it.</li><li>Build, train, and <em>debug</em> an MLP without copying (diagnose a bad LR from the curve).</li><li>Explain cross-entropy, the val split, and overfitting plus three fixes, in your own words.</li><li>Read an empirical ML paper and follow its training setup.</li></ul>
@@ -431,7 +431,7 @@
         <li><strong>The full pipeline.</strong> Pretrain → SFT → eval, end to end, once.</li>
       </ul>
       <h4>Primary path</h4>
-      <p>Karpathy's <strong>"Let's build GPT"</strong> and <a href="https://github.com/karpathy/nanoGPT" target="_blank" rel="noopener">nanoGPT</a> get you attention from a blank file. Sebastian Raschka's <a href="https://github.com/rasbt/LLMs-from-scratch" target="_blank" rel="noopener">Build an LLM (From Scratch)</a> is the deeper companion. Then run <a href="https://github.com/karpathy/nanochat" target="_blank" rel="noopener">nanochat</a> once to see the whole modern stack end to end. The model it makes is weak, but running the pipeline is the point.</p>
+      <p>Karpathy's <strong>"Let's build GPT"</strong> and <a href="https://github.com/karpathy/nanoGPT" target="_blank" rel="noopener">nanoGPT</a> get you attention from a blank file. Sebastian Raschka's <a href="https://github.com/rasbt/LLMs-from-scratch" target="_blank" rel="noopener">Build an LLM (From Scratch)</a> is the deeper companion. Then run <a href="https://github.com/karpathy/nanochat" target="_blank" rel="noopener">nanochat</a> once to see the whole modern stack end to end. The model it makes is weak, but running the pipeline is the point. And for a visual feel of how attention moves information around, read Jay Alammar's <a href="https://jalammar.github.io/illustrated-transformer/" target="_blank" rel="noopener">The Illustrated Transformer</a> next to the code.</p>
       <div class="callout note"><b>Deliverable.</b> A from-scratch GPT, <em>plus one question you answered empirically</em> (say, "how does final loss change with depth at fixed params?"). That shift from building to <em>investigating</em> is what makes this Phase 2 and not Phase 0.</div>
       <h4>Milestone</h4>
       <ul class="ms"><li>Implement multi-head causal self-attention from a blank file; explain every line.</li><li>Explain why attention needs positional info and how RoPE provides it.</li><li>Describe what a tokenizer does + one way it can hurt quality.</li><li>Train a GPT end-to-end; reproduce nanochat's pipeline once.</li></ul>
@@ -533,6 +533,7 @@
         <li>Sutton &amp; Barto, <em>Reinforcement Learning: An Introduction</em> (free) + David Silver lectures <span class="dim">· RL-1</span></li>
         <li><a href="https://spinningup.openai.com" target="_blank" rel="noopener">OpenAI Spinning Up</a> + <a href="https://github.com/vwxyzjn/cleanrl" target="_blank" rel="noopener">CleanRL</a> + <a href="https://gymnasium.farama.org" target="_blank" rel="noopener">Gymnasium</a> + Stable-Baselines3 <span class="dim">· RL-2</span></li>
         <li><a href="https://rlhfbook.com" target="_blank" rel="noopener">RLHF Book</a> + HF TRL + Open-Reasoner-Zero/DAPO <span class="dim">· RL-3 (shared with LLM Phase 4)</span></li>
+        <li><a href="https://rl.paraz.in/#frontier" target="_blank" rel="noopener">RL Field Manual</a>, an interactive guide to LLM reinforcement learning <span class="dim">· RL-3 (the frontier)</span></li>
       </ul>
       <p class="dim" style="font-size:13.5px">Full detail in <code>rl-track.md</code>.</p>
 
@@ -565,7 +566,9 @@
       <table>
         <tr><th>Resource</th><th>Phase</th><th>What</th></tr>
         <tr><td><a href="https://karpathy.ai/zero-to-hero.html" target="_blank" rel="noopener">Karpathy's Zero to Hero</a></td><td><span class="pz">1–2</span></td><td>From-scratch: micrograd, makemore, build-GPT.</td></tr>
+        <tr><td><a href="https://www.youtube.com/watch?v=aircAruvnKk&amp;list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi" target="_blank" rel="noopener">3Blue1Brown's Neural Networks</a></td><td><span class="pz">1</span></td><td>The best visual intuition for nets, gradients, and backprop.</td></tr>
         <tr><td><a href="https://github.com/karpathy/nanoGPT" target="_blank" rel="noopener">nanoGPT</a> / <a href="https://github.com/karpathy/nanochat" target="_blank" rel="noopener">nanochat</a></td><td><span class="pz">2</span></td><td>Minimal GPT to study; full modern stack end-to-end.</td></tr>
+        <tr><td><a href="https://jalammar.github.io/illustrated-transformer/" target="_blank" rel="noopener">The Illustrated Transformer</a></td><td><span class="pz">2</span></td><td>Jay Alammar's visual walk through attention. Read it next to the code.</td></tr>
         <tr><td><a href="https://github.com/rasbt/LLMs-from-scratch" target="_blank" rel="noopener">Raschka's Build an LLM from Scratch</a></td><td><span class="pz">2</span></td><td>Thorough code-first book + repo.</td></tr>
         <tr><td><a href="https://course.fast.ai" target="_blank" rel="noopener">fast.ai</a> / <a href="https://d2l.ai" target="_blank" rel="noopener">d2l.ai</a></td><td><span class="pz">0–3</span></td><td>Build-first DL course; interactive textbook (reference).</td></tr>
         <tr><td><a href="https://cs336.stanford.edu/" target="_blank" rel="noopener">Stanford CS336 (Spring 2026)</a></td><td><span class="pz">3–4</span></td><td>The systems flagship. Free lectures + assignments.</td></tr>
@@ -578,6 +581,13 @@
         <li><a href="https://rlhfbook.com/" target="_blank" rel="noopener">The RLHF Book, by Nathan Lambert</a> <span class="dim">(Phase 4; free online)</span></li>
         <li><a href="https://mml-book.github.io" target="_blank" rel="noopener">Mathematics for ML, Deisenroth et al.</a> <span class="dim">(Phase 1; math reference, free)</span></li>
         <li><a href="https://www.deeplearningbook.org" target="_blank" rel="noopener">Deep Learning, Goodfellow et al.</a> <span class="dim">(theory reference; dip in)</span></li>
+      </ul>
+      <h4>Foundational papers (read them, don't just cite them)</h4>
+      <ul class="clean">
+        <li><a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener">Attention Is All You Need</a> <span class="dim">· the Transformer · Phase 2</span></li>
+        <li><a href="https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf" target="_blank" rel="noopener">Improving Language Understanding by Generative Pre-Training</a> <span class="dim">· GPT-1 · Phase 2</span></li>
+        <li><a href="https://arxiv.org/abs/1810.04805" target="_blank" rel="noopener">BERT</a> <span class="dim">· bidirectional pre-training · Phase 2</span></li>
+        <li><a href="https://arxiv.org/abs/2501.12948" target="_blank" rel="noopener">DeepSeek-R1</a> <span class="dim">· RL for reasoning, the GRPO breakthrough · Phase 4 / RL-3</span></li>
       </ul>
       <h4>People / newsletters (signal, low noise)</h4>
       <ul class="clean">
