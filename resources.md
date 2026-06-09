@@ -37,6 +37,13 @@ notes which phase it serves. Verified current as of 2026-06.
 | **Deep Learning — Goodfellow, Bengio, Courville** | 1–3 | The classic theory reference; dip in, don't read cover-to-cover. | deeplearningbook.org |
 | **Andrew Ng — Machine Learning Specialization** | 1 | Gentle, rigorous ML fundamentals if you want more hand-holding. | (Coursera) |
 
+## Visual learning & explainer tools
+
+For a visual learner, the highest-leverage move is *making* an explainer of what you just built (see the "Teach to learn, then animate it" ritual in [research-method.md](research-method.md)).
+- [3Blue1Brown](https://www.youtube.com/watch?v=aircAruvnKk&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) and [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/): the bar to aim for, and the best things to *watch*.
+- [LottieFiles motion-design skill](https://github.com/lottiefiles/motion-design-skill): an agent skill for motion *craft* (timing, easing, choreography). Install with `npx skills add LottieFiles/motion-design-skill`.
+- [Manim](https://www.manim.community/): 3Blue1Brown's own engine, for real math visualization (vector fields, gradients, loss surfaces). SVG/CSS is fine for simpler concepts.
+
 ## Canonical papers (read, don't just cite)
 
 | Paper | Phase | Why |

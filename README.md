@@ -99,7 +99,7 @@ The compounding habit matters more than any single course. Aim for a sustainable
 
 - **Build / reproduce** one slice of the current phase's project (the core — most of your hours).
 - **Read 2–3 papers**, figures-first, each with a one-paragraph note (see research-method.md).
-- **Write one note** — a log entry, a "what I learned / got stuck on," or a short explainer.
+- **Write one note** — a log entry, a "what I learned / got stuck on," a short explainer, or (best for a visual learner) a 20–40s animated explainer of the concept you just built. See [research-method.md](research-method.md).
 - **Engage once** — post a result, ask/answer in a community, read someone else's work.
 
 Four habits, every week. Miss the courses, keep the loop.
