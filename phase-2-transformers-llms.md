@@ -20,9 +20,9 @@ foundation for every research idea you'll later have.
 6. **The full pipeline** — pretrain → (optional) mid-train → SFT → eval, so you've seen the whole shape once before Phases 3–4 deepen each part.
 
 ## Primary path
-- **Karpathy — "Let's build GPT" + nanoGPT.** Build a GPT from a blank file, then study `nanoGPT` as the clean reference implementation. Train it on tiny-shakespeare, then on a slightly bigger corpus. This is your attention-from-scratch deliverable.
+- **Karpathy — "Let's build GPT" + nanoGPT.** Build a GPT from a blank file, then study `nanoGPT` as the clean reference implementation — deprecated since Nov 2025 in favor of **nanochat** (below), but still the shortest complete GPT you can hold in your head. Train it on tiny-shakespeare, then on a slightly bigger corpus. This is your attention-from-scratch deliverable.
 - **Sebastian Raschka — *Build a Large Language Model (From Scratch)* (book + repo).** The most thorough, code-first walk through every component, including loading real pretrained weights (GPT-2 → Llama). Excellent companion to nanoGPT; use it to go deeper on the parts Karpathy moves quickly through. The repo also has GPT-2→Llama and Qwen-from-scratch conversions.
-- **Karpathy — nanochat.** Reproduce the *entire* modern stack end-to-end once: tokenizer → pretrain → mid-train → SFT → (optional RL) → eval → a chat UI. The resulting model is weak ("$100 ChatGPT" is marketing), but running the whole pipeline once is the point — it makes Phases 3–4 concrete.
+- **Karpathy — nanochat.** nanoGPT's official successor. Reproduce the *entire* modern stack end-to-end once: tokenizer → pretrain → mid-train → SFT → (optional RL) → eval → a chat UI. The resulting model is weak ("$100 ChatGPT" is marketing), but running the whole pipeline once is the point — it makes Phases 3–4 concrete.
 - **Jay Alammar — [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/).** The clearest visual explainer of how attention moves information through the model. Read it alongside the code whenever the mechanism feels abstract.
 
 ## Foundational papers (read them, don't just cite them)

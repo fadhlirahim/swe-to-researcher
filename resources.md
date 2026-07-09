@@ -16,8 +16,8 @@ notes which phase it serves. Verified current as of 2026-06.
 |---|---|---|---|
 | **Karpathy — Neural Networks: Zero to Hero** | 1–2 | The canonical from-scratch course: micrograd, makemore, build-GPT. Do the exercises. | karpathy.ai/zero-to-hero.html |
 | **3Blue1Brown's Neural Networks series** | 1 | The best visual intuition for nets, gradients, and backprop. Watch when a concept won't click. | [youtube.com](https://www.youtube.com/watch?v=aircAruvnKk&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) |
-| **nanoGPT** | 2 | Clean minimal GPT to study + train. | github.com/karpathy/nanoGPT |
-| **nanochat** | 2 | The full modern stack end-to-end (tokenizer→pretrain→SFT→eval→UI). | github.com/karpathy/nanochat |
+| **nanoGPT** | 2 | Clean minimal GPT to study + train. Deprecated & frozen since Nov 2025 — still the shortest complete read; nanochat is the successor. | github.com/karpathy/nanoGPT |
+| **nanochat** | 2 | nanoGPT's official successor: the full modern stack end-to-end (tokenizer→pretrain→SFT→eval→UI). | github.com/karpathy/nanochat |
 | **The Illustrated Transformer (Jay Alammar)** | 2 | Visual walk through attention; read alongside the code. | jalammar.github.io/illustrated-transformer |
 | **Sebastian Raschka — Build an LLM (From Scratch)** | 2 | Thorough code-first book + repo (incl. GPT-2→Llama, Qwen-from-scratch). | github.com/rasbt/LLMs-from-scratch |
 | **fast.ai — Practical Deep Learning** | 0–1 | Top-down, build-first DL course. Free. | course.fast.ai |

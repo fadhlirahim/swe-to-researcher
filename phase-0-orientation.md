@@ -16,7 +16,7 @@ not understanding. Understanding comes in Phase 1.
 ## Do this, in order
 
 1. **Environment (half a day).** Python + PyTorch. A single consumer GPU, or free Colab/Kaggle to start (don't spend money yet). Get `uv` or conda, a notebook + a real editor, and `git`. Confirm `torch.cuda.is_available()` (or MPS on your Mac). Don't over-build the setup — you'll redo it later.
-2. **First vertical slice (1–2 days).** Run the **fast.ai Lesson 1** notebook, or train **nanoGPT** on the tiny-shakespeare dataset following the README. Goal: watch a real training loop run and a loss curve drop. You will not understand most of it. That's fine — you're proving the machine works and that you can drive it.
+2. **First vertical slice (1–2 days).** Run the **fast.ai Lesson 1** notebook, or train **nanoGPT** on the tiny-shakespeare dataset following the README (nanoGPT is deprecated but frozen — ideal for a first run: it will never change under you). Goal: watch a real training loop run and a loss curve drop. You will not understand most of it. That's fine — you're proving the machine works and that you can drive it.
 3. **Create your public scaffolding (half a day):**
    - A GitHub repo, e.g. `learning-ml` — every reproduction and experiment goes here.
    - A **research log** (`LOG.md` or a daily note): what you did, what broke, what you learned, what's next. One entry per session. This is the single highest-ROI habit in the whole roadmap.
